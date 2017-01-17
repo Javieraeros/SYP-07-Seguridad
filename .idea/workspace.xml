@@ -1,138 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="35cbd53f-997b-407d-a390-90628e1c10fd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Controllers/PersonaController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Persona.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/Manejadora/ManejadoraPersona.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/SYP-07-Seguridad.iml" afterPath="$PROJECT_DIR$/.idea/SYP-07-Seguridad.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bootstrap/app.php" afterPath="$PROJECT_DIR$/bootstrap/app.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/autoload.php" afterPath="$PROJECT_DIR$/vendor/autoload.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_real.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_real.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/installed.json" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/console/Application.php" afterPath="$PROJECT_DIR$/vendor/symfony/console/Application.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/console/Command/Command.php" afterPath="$PROJECT_DIR$/vendor/symfony/console/Command/Command.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/console/Descriptor/MarkdownDescriptor.php" afterPath="$PROJECT_DIR$/vendor/symfony/console/Descriptor/MarkdownDescriptor.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/console/Descriptor/TextDescriptor.php" afterPath="$PROJECT_DIR$/vendor/symfony/console/Descriptor/TextDescriptor.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/console/Formatter/OutputFormatter.php" afterPath="$PROJECT_DIR$/vendor/symfony/console/Formatter/OutputFormatter.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/console/Formatter/OutputFormatterStyleStack.php" afterPath="$PROJECT_DIR$/vendor/symfony/console/Formatter/OutputFormatterStyleStack.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/console/Helper/DescriptorHelper.php" afterPath="$PROJECT_DIR$/vendor/symfony/console/Helper/DescriptorHelper.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/console/Helper/Helper.php" afterPath="$PROJECT_DIR$/vendor/symfony/console/Helper/Helper.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/console/Helper/SymfonyQuestionHelper.php" afterPath="$PROJECT_DIR$/vendor/symfony/console/Helper/SymfonyQuestionHelper.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/console/Helper/Table.php" afterPath="$PROJECT_DIR$/vendor/symfony/console/Helper/Table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/console/Helper/TableStyle.php" afterPath="$PROJECT_DIR$/vendor/symfony/console/Helper/TableStyle.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/console/LICENSE" afterPath="$PROJECT_DIR$/vendor/symfony/console/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/console/Question/ChoiceQuestion.php" afterPath="$PROJECT_DIR$/vendor/symfony/console/Question/ChoiceQuestion.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/console/Question/Question.php" afterPath="$PROJECT_DIR$/vendor/symfony/console/Question/Question.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/console/Style/SymfonyStyle.php" afterPath="$PROJECT_DIR$/vendor/symfony/console/Style/SymfonyStyle.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/ApplicationTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/console/Tests/ApplicationTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Command/CommandTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/console/Tests/Command/CommandTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Descriptor/AbstractDescriptorTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/console/Tests/Descriptor/AbstractDescriptorTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Descriptor/MarkdownDescriptorTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/console/Tests/Descriptor/MarkdownDescriptorTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Descriptor/ObjectsProvider.php" afterPath="$PROJECT_DIR$/vendor/symfony/console/Tests/Descriptor/ObjectsProvider.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Descriptor/TextDescriptorTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/console/Tests/Descriptor/TextDescriptorTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Helper/HelperSetTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/console/Tests/Helper/HelperSetTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Helper/ProgressBarTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/console/Tests/Helper/ProgressBarTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Helper/QuestionHelperTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/console/Tests/Helper/QuestionHelperTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Helper/SymfonyQuestionHelperTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/console/Tests/Helper/SymfonyQuestionHelperTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Output/ConsoleOutputTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/console/Tests/Output/ConsoleOutputTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Output/NullOutputTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/console/Tests/Output/NullOutputTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/debug/ErrorHandler.php" afterPath="$PROJECT_DIR$/vendor/symfony/debug/ErrorHandler.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/debug/ExceptionHandler.php" afterPath="$PROJECT_DIR$/vendor/symfony/debug/ExceptionHandler.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/debug/FatalErrorHandler/UndefinedMethodFatalErrorHandler.php" afterPath="$PROJECT_DIR$/vendor/symfony/debug/FatalErrorHandler/UndefinedMethodFatalErrorHandler.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/debug/LICENSE" afterPath="$PROJECT_DIR$/vendor/symfony/debug/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/debug/Tests/ErrorHandlerTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/debug/Tests/ErrorHandlerTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/debug/Tests/ExceptionHandlerTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/debug/Tests/ExceptionHandlerTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/debug/Tests/FatalErrorHandler/UndefinedMethodFatalErrorHandlerTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/debug/Tests/FatalErrorHandler/UndefinedMethodFatalErrorHandlerTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/GenericEvent.php" afterPath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/GenericEvent.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/LICENSE" afterPath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Tests/ContainerAwareEventDispatcherTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Tests/ContainerAwareEventDispatcherTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Tests/Debug/TraceableEventDispatcherTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Tests/Debug/TraceableEventDispatcherTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Tests/DependencyInjection/RegisterListenersPassTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Tests/DependencyInjection/RegisterListenersPassTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Tests/ImmutableEventDispatcherTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Tests/ImmutableEventDispatcherTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/finder/Finder.php" afterPath="$PROJECT_DIR$/vendor/symfony/finder/Finder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/finder/LICENSE" afterPath="$PROJECT_DIR$/vendor/symfony/finder/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/AcceptHeader.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/AcceptHeader.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/AcceptHeaderItem.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/AcceptHeaderItem.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/BinaryFileResponse.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/BinaryFileResponse.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Cookie.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Cookie.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/File/File.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/File/File.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/File/MimeType/ExtensionGuesser.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/File/MimeType/ExtensionGuesser.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/File/MimeType/MimeTypeGuesser.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/File/MimeType/MimeTypeGuesser.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/JsonResponse.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/JsonResponse.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/LICENSE" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/RedirectResponse.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/RedirectResponse.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Request.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Request.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Response.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Response.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/StreamedResponse.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/StreamedResponse.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/CookieTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/CookieTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/File/FileTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/File/FileTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/ResponseHeaderBagTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/ResponseHeaderBagTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/ResponseTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/ResponseTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/Session/Storage/Handler/MemcacheSessionHandlerTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/Session/Storage/Handler/MemcacheSessionHandlerTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/Session/Storage/Handler/MemcachedSessionHandlerTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/Session/Storage/Handler/MemcachedSessionHandlerTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/Session/Storage/Handler/PdoSessionHandlerTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/Session/Storage/Handler/PdoSessionHandlerTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/Session/Storage/Handler/WriteCheckSessionHandlerTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/Session/Storage/Handler/WriteCheckSessionHandlerTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/Session/Storage/Proxy/SessionHandlerProxyTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/Session/Storage/Proxy/SessionHandlerProxyTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/DataCollector/RequestDataCollector.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-kernel/DataCollector/RequestDataCollector.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Kernel.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-kernel/Kernel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/LICENSE" afterPath="$PROJECT_DIR$/vendor/symfony/http-kernel/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Profiler/Profile.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-kernel/Profiler/Profile.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/Bundle/BundleTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/Bundle/BundleTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/CacheClearer/ChainCacheClearerTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/CacheClearer/ChainCacheClearerTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/ClientTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/ClientTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/Config/FileLocatorTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/Config/FileLocatorTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/Controller/ArgumentResolverTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/Controller/ArgumentResolverTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/Controller/ControllerResolverTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/Controller/ControllerResolverTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/DataCollector/LoggerDataCollectorTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/DataCollector/LoggerDataCollectorTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/DataCollector/RequestDataCollectorTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/DataCollector/RequestDataCollectorTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/DataCollector/TimeDataCollectorTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/DataCollector/TimeDataCollectorTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/Debug/TraceableEventDispatcherTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/Debug/TraceableEventDispatcherTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/DependencyInjection/FragmentRendererPassTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/DependencyInjection/FragmentRendererPassTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/DependencyInjection/LazyLoadingFragmentHandlerTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/DependencyInjection/LazyLoadingFragmentHandlerTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/DependencyInjection/MergeExtensionConfigurationPassTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/DependencyInjection/MergeExtensionConfigurationPassTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/EventListener/AddRequestFormatsListenerTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/EventListener/AddRequestFormatsListenerTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/EventListener/DebugHandlersListenerTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/EventListener/DebugHandlersListenerTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/EventListener/ExceptionListenerTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/EventListener/ExceptionListenerTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/EventListener/FragmentListenerTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/EventListener/FragmentListenerTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/EventListener/LocaleListenerTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/EventListener/LocaleListenerTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/EventListener/ProfilerListenerTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/EventListener/ProfilerListenerTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/EventListener/ResponseListenerTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/EventListener/ResponseListenerTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/EventListener/RouterListenerTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/EventListener/RouterListenerTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/EventListener/SurrogateListenerTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/EventListener/SurrogateListenerTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/EventListener/TestSessionListenerTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/EventListener/TestSessionListenerTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/EventListener/TranslatorListenerTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/EventListener/TranslatorListenerTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/EventListener/ValidateRequestListenerTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/EventListener/ValidateRequestListenerTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/Fixtures/Controller/BasicTypesController.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/Fixtures/Controller/BasicTypesController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/Fixtures/Controller/ExtendingRequest.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/Fixtures/Controller/ExtendingRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/Fixtures/Controller/VariadicController.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/Fixtures/Controller/VariadicController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/Fragment/FragmentHandlerTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/Fragment/FragmentHandlerTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/Fragment/HIncludeFragmentRendererTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/Fragment/HIncludeFragmentRendererTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/Fragment/InlineFragmentRendererTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/Fragment/InlineFragmentRendererTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/HttpCache/EsiTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/HttpCache/EsiTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/HttpCache/SsiTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/HttpCache/SsiTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/HttpKernelTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/HttpKernelTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/KernelTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/KernelTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/process/LICENSE" afterPath="$PROJECT_DIR$/vendor/symfony/process/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/process/Process.php" afterPath="$PROJECT_DIR$/vendor/symfony/process/Process.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/process/ProcessBuilder.php" afterPath="$PROJECT_DIR$/vendor/symfony/process/ProcessBuilder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/process/Tests/ProcessFailedExceptionTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/process/Tests/ProcessFailedExceptionTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/translation/LICENSE" afterPath="$PROJECT_DIR$/vendor/symfony/translation/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/translation/MessageCatalogueInterface.php" afterPath="$PROJECT_DIR$/vendor/symfony/translation/MessageCatalogueInterface.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Tests/LoggingTranslatorTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/translation/Tests/LoggingTranslatorTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Tests/MessageCatalogueTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/translation/Tests/MessageCatalogueTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Tests/TranslatorCacheTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/translation/Tests/TranslatorCacheTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Tests/Writer/TranslationWriterTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/translation/Tests/Writer/TranslationWriterTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/yaml/Inline.php" afterPath="$PROJECT_DIR$/vendor/symfony/yaml/Inline.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/yaml/LICENSE" afterPath="$PROJECT_DIR$/vendor/symfony/yaml/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/yaml/Parser.php" afterPath="$PROJECT_DIR$/vendor/symfony/yaml/Parser.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/yaml/Tests/ParserTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/yaml/Tests/ParserTest.php" />
-    </list>
+    <list default="true" id="35cbd53f-997b-407d-a390-90628e1c10fd" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -338,12 +207,12 @@
       <option name="presentableId" value="Default" />
       <updated>1484214931947</updated>
       <workItem from="1484214933660" duration="1508000" />
-      <workItem from="1484292429808" duration="3319000" />
+      <workItem from="1484292429808" duration="3651000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4827000" />
+    <option name="totallyTimeSpent" value="5159000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
