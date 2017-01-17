@@ -1,10 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use Illuminate\Database;
-
 //TODO Usar response
+
+use App\Http\Manejadora\ManejadoraPersona;
+
+
 class PersonaController extends Controller
 {
     /**
@@ -17,12 +18,19 @@ class PersonaController extends Controller
         //
     }
 
-    public function getPersona($id){
-        $resultado=Database\ManejadoraPersona::getPersonaBD($id);
+    public function getPersonas($id=null){
+        $resultado=ManejadoraPersona::getPersonaBD($id);
+
+        /*if(isset($id)){
+            //$results=app('db')->select("Select * from Personas where Id=?",$id);
+            $resultado= DB::table('Personas')->where('Id',$id)->first();
+        }else{
+            $resultado = app('db')->select("SELECT * FROM Personas");
+        }*/
         return $resultado;
     }
 
-    public function postPersona($Persona){
+    public function postPersonas($Persona){
 
     }
 }

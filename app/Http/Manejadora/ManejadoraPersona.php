@@ -1,12 +1,5 @@
 <?php
-
-namespace Illuminate\Database;
-/**
- * Created by PhpStorm.
- * User: fjruiz
- * Date: 13/01/17
- * Time: 9:10
- */
+namespace App\Http\Manejadora;
 class ManejadoraPersona
 {
     static function getPersonaBD($id){
