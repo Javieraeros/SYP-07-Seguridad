@@ -20,13 +20,6 @@ class PersonaController extends Controller
 
     public function getPersonas($id=null){
         $resultado=ManejadoraPersona::getPersonaBD($id);
-
-        /*if(isset($id)){
-            //$results=app('db')->select("Select * from Personas where Id=?",$id);
-            $resultado= DB::table('Personas')->where('Id',$id)->first();
-        }else{
-            $resultado = app('db')->select("SELECT * FROM Personas");
-        }*/
         return $resultado;
     }
 
