@@ -37,5 +37,16 @@ class Persona extends Model implements AuthenticatableContract, AuthorizableCont
         $this->fillable = $fillable;
     }
 
+    public function getId(){
+        return $this->fillable['id'];
+    }
+
+    public function getNombre(){
+        return $this->fillable['nombre'];
+    }
+
+    public function getPassword(){
+        return $this->fillable['password'];
+    }
 
 }
