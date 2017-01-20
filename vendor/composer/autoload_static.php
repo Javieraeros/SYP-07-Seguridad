@@ -47,6 +47,7 @@ class ComposerStaticInit9af5f4b9c01f74578d1dead3fa1d09d1
         ),
         'L' => 
         array (
+            'Lcobucci\\JWT\\' => 13,
             'Laravel\\Lumen\\' => 14,
         ),
         'I' => 
@@ -153,6 +154,10 @@ class ComposerStaticInit9af5f4b9c01f74578d1dead3fa1d09d1
         'Monolog\\' => 
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
+        ),
+        'Lcobucci\\JWT\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/lcobucci/jwt/src',
         ),
         'Laravel\\Lumen\\' => 
         array (
