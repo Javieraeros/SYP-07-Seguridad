@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 //TODO Usar response
 
+//TODO Preguntar Miguel Angel problema contraseña
+
 use App\Http\Manejadora\ManejadoraPersona;
 use App\Persona;
 use App\Providers\AuthServiceProvider;
@@ -39,12 +41,12 @@ class PersonaController extends Controller
         if($request->has('Nombre') and $request->has('Password')){
             $opciones['coste']=12;
 
-            $parametros['id']=0; //No inserta el id puesto que es autogenerado
-            $parametros['nombre']=$request->input('Nombre');
-            $parametros['password']=password_hash($request->input('Password'),PASSWORD_BCRYPT,$opciones);
-            //$persona=new Persona($parametros);
+            $persona=new Persona();
+            $persona->Id=0; //No inserta el id puesto que es autogenerado
+            $persona->Nombre=$request->input('Nombre');
+            $persona->Password=password_hash($request->input('Password'),PASSWORD_BCRYPT,$opciones);
 
-            $resultado= Persona::create($parametros);
+            $resultado= Persona::create($persona->toArray());
             $code=200;
             //ManejadoraPersona::postPersonaBD($persona);
         }
