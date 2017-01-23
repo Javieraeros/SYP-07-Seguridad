@@ -23,28 +23,46 @@ class PersonaController extends Controller
         //
     }
 
-    public function getPersonas(Request $request,$id=null){
-        //if($request->user()!=null) {
+    public function getPersona($id){
+        $resultado=Persona::find($id);
+        return response()->json($resultado);
+    }
 
-            //$resultado = ManejadoraPersona::getPersonaBD($id);
-
-            $resultado=DB::select("Select * from Personas");
-        //}
-        return $resultado;
+    public function getPersonas(){
+        $resultado=Persona::all();
+        return response()->json($resultado);
     }
 
     public function postPersonas(Request $request){
+        $resultado=null;
+        $code=400;
         if($request->has('Nombre') and $request->has('Password')){
-            //TODO hacerlo en middleware o algo por el estilo
-
             $opciones['coste']=12;
 
             $parametros['id']=0; //No inserta el id puesto que es autogenerado
             $parametros['nombre']=$request->input('Nombre');
             $parametros['password']=password_hash($request->input('Password'),PASSWORD_BCRYPT,$opciones);
-            $persona=new Persona($parametros);
-            ManejadoraPersona::postPersonaBD($persona);
+            //$persona=new Persona($parametros);
+
+            $resultado= Persona::create($parametros);
+            $code=200;
+            //ManejadoraPersona::postPersonaBD($persona);
         }
 
+        return response()->json($resultado,$code);
+
+    }
+
+    public function deletePersona($id){
+        $persona=Persona::destroy($id);
+        return response()->json($persona,200);
+    }
+
+    public function putPersona(Request $request,$id){
+        $persona=Persona::find($id);
+        $persona['Nombre']=$request->input(['Nombre']);
+        $persona['Password']=password_hash($request->input('Password'),PASSWORD_BCRYPT,['coste'=>12]);
+        $persona->save();
+        return response()->json($persona);
     }
 }

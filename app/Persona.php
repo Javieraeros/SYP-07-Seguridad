@@ -26,16 +26,20 @@ class Persona extends Model implements AuthenticatableContract, AuthorizableCont
     protected $fillable = [
         'id', 'nombre','password'
     ];
+    protected $primaryKey='Id';
+    protected $table="Personas";
+    public $timestamps=false;
 
 
     /**
      * Persona constructor.
      * @param array $fillable
      */
-    public function __construct(array $fillable)
+    /*public function __construct(array $fillable)
     {
+        parent::__construct();
         $this->fillable = $fillable;
-    }
+    }*/
 
     public function getId(){
         return $this->fillable['id'];

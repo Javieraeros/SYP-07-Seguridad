@@ -126,7 +126,6 @@
           <root url="file://$MODULE_DIR$/vendor/illuminate/validation" />
           <root url="file://$MODULE_DIR$/vendor/illuminate/view" />
           <root url="file://$MODULE_DIR$/vendor/laravel/lumen-framework" />
-          <root url="file://$MODULE_DIR$/vendor/lcobucci/jwt" />
           <root url="file://$MODULE_DIR$/vendor/mockery/mockery" />
           <root url="file://$MODULE_DIR$/vendor/monolog/monolog" />
           <root url="file://$MODULE_DIR$/vendor/mtdowling/cron-expression" />
@@ -198,7 +197,6 @@
           <root url="file://$MODULE_DIR$/vendor/illuminate/validation" />
           <root url="file://$MODULE_DIR$/vendor/illuminate/view" />
           <root url="file://$MODULE_DIR$/vendor/laravel/lumen-framework" />
-          <root url="file://$MODULE_DIR$/vendor/lcobucci/jwt" />
           <root url="file://$MODULE_DIR$/vendor/mockery/mockery" />
           <root url="file://$MODULE_DIR$/vendor/monolog/monolog" />
           <root url="file://$MODULE_DIR$/vendor/mtdowling/cron-expression" />
