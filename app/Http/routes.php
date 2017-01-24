@@ -11,11 +11,22 @@
 |
 */
 
+//TODO añadir metodo getToken que nos devuelva un token jwt
 $app->get('/', function () use ($app) {
     return $app->version();
 });
+//Version 1.1
+/*
+ * $app->get('personas/{id}',['middleware'=>'auth:id',function($id){
+    $persona=new \App\Http\Controllers\PersonaController();
+    return $persona->getPersona($id);
+}]);
+ */
 
-$app->get('personas/{id}','PersonaController@getPersona');
+//Version 2.0    https://www.tutorialspoint.com/laravel/laravel_middleware.htm
+//TODO esto es autorización, no autenticación, mover
+$app->get('personas/{id}',['middleware'=>'auth:id','uses'=>'PersonaController@getPersona']);
+
 $app->get('personas','PersonaController@getPersonas');
 
 $app->post('personas','PersonaController@postPersonas');
