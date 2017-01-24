@@ -28,6 +28,10 @@ class Persona extends Model implements AuthenticatableContract, AuthorizableCont
         'Id', 'Nombre','Password'
     ];
 
+    protected $hidden=[
+        'Password'
+    ];
+
     protected $primaryKey='Id';
     protected $table="Personas";
     public $timestamps=false;

@@ -1,20 +1,19 @@
 <?php
 
 namespace App\Http\Controllers;
-//TODO Usar response
-
-//TODO Preguntar Miguel Angel problema contraseña
+//TODO Usar response y middleware para el tema de tokens, autorización y autenticación
 
 use App\Http\Manejadora\ManejadoraPersona;
 use App\Persona;
-use App\Providers\AuthServiceProvider;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\DB;
-
+use Lcobucci\JWT\Builder;
+use Lcobucci\JWT\Parser;
+use Lcobucci\JWT\Signer\Hmac\Sha256;
+use Lcobucci\JWT\ValidationData;
 
 class PersonaController extends Controller
 {
+
     /**
      * Create a new controller instance.
      *
@@ -25,7 +24,20 @@ class PersonaController extends Controller
         //
     }
 
-    public function getPersona($id){
+    public function getPersona(Request $request,$id){
+        //datos de validación
+        $data=new ValidationData();
+        $data->setIssuer('http://personas.fjruiz.ciclo.iesnervion.es');
+        $data->setAudience('http://personas.fjruiz.ciclo.iesnervion.es');
+        $data->setId('1234');
+        $signer=new Sha256();
+        //recuperamos el token con 'Bearer ' delante, por eso usamos substring
+        $token =(new Parser())->parse(substr((string) $request->header("Authorization"),7));
+
+        //echo var_dump($token->verify($signer,'secretoIberico'));
+
+        echo var_dump($token->validate($data));
+
         $resultado=Persona::find($id);
         return response()->json($resultado);
     }
@@ -51,7 +63,15 @@ class PersonaController extends Controller
             //ManejadoraPersona::postPersonaBD($persona);
         }
 
-        return response()->json($resultado,$code);
+        $signer = new Sha256();
+        $token=(new Builder())
+            ->setIssuer('http://personas.fjruiz.ciclo.iesnervion.es')
+            ->setAudience('http://personas.fjruiz.ciclo.iesnervion.es')
+            //->setNotBefore(time() + 60)
+            ->setId('1234')
+            ->sign($signer,'secretoIberico')
+            ->getToken();
+        return response()->json($resultado,$code)->header("Authorization","Bearer ".$token);
 
     }
 
