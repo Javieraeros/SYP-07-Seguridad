@@ -24,8 +24,10 @@ $app->get('/', function () use ($app) {
  */
 
 //Version 2.0    https://www.tutorialspoint.com/laravel/laravel_middleware.htm
-//TODO esto es autorización, no autenticación, mover
-$app->get('personas/{id}',['middleware'=>'auth:id','uses'=>'PersonaController@getPersona']);
+
+$app->get('token','AuthController@getToken');
+
+$app->get('personas/{id}',['middleware'=>'autho:id','uses'=>'PersonaController@getPersona']);
 
 $app->get('personas','PersonaController@getPersonas');
 

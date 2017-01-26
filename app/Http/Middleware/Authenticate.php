@@ -37,31 +37,9 @@ class Authenticate
      * @return mixed
      */
     //TODO Esto es una authorization (no?), mover a dicho middleware
-    public function handle($request, Closure $next,$id)
+    public function handle($request, Closure $next)
     {
-        //datos de validación
-        $data=new ValidationData();
-        $data->setIssuer('http://personas.fjruiz.ciclo.iesnervion.es');
-        $data->setAudience('http://personas.fjruiz.ciclo.iesnervion.es');
-        $data->setId('1234');
-        $signer=new Sha256();
 
-        //TODO eliminar token de lista blanca,filtrar por id
-
-        try{
-            //recuperamos el token con 'Bearer ' delante, por eso usamos substring
-            //Pongo esta linea aqui,porque me puede dar Runtime exception
-            $token =(new Parser())->parse(substr((string) $request->header("Authorization"),7));
-            if($token->validate($data) and $token->verify($signer,'secretoIberico')){
-                return $next($id);
-            }else{
-                return response("No válido!",401);
-            }
-        }catch(\RuntimeException $runtimeException){
-            return response("Token mal formado!",400);
-        }catch(\Exception $exception){
-            return response("Unauthorized",401);
-        }
     }
 
 

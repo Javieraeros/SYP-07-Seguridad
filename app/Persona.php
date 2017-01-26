@@ -9,7 +9,6 @@
 namespace App;
 
 use Illuminate\Auth\Authenticatable;
-use Illuminate\Support\Facades\Hash;
 use Laravel\Lumen\Auth\Authorizable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
@@ -25,7 +24,7 @@ class Persona extends Model implements AuthenticatableContract, AuthorizableCont
      * @var array
      */
     protected $fillable = [
-        'Id', 'Nombre','Password'
+        'Id', 'Nombre','Correo','Password'
     ];
 
     protected $hidden=[

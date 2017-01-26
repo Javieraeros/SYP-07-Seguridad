@@ -6,6 +6,7 @@ namespace App\Http\Controllers;
 use App\Http\Manejadora\ManejadoraPersona;
 use App\Persona;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 use Lcobucci\JWT\Builder;
 use Lcobucci\JWT\Parser;
 use Lcobucci\JWT\Signer\Hmac\Sha256;
@@ -46,20 +47,20 @@ class PersonaController extends Controller
             $persona=new Persona();
             $persona->Id=0; //No inserta el id puesto que es autogenerado
             $persona->Nombre=$request->input('Nombre');
-            $persona->Password=password_hash($request->input('Password'),PASSWORD_BCRYPT,$opciones);
+            $persona->Password=Hash::make($request->input('Password'));
 
             $resultado= Persona::create($persona->toArray());
             $code=200;
             //ManejadoraPersona::postPersonaBD($persona);
         }
 
-        //TODO mover a Authenticate
+        //TODO mover a Authenticate,guardar id de usuario en el token para authorization
         $signer = new Sha256();
         $token=(new Builder())
             ->setIssuer('http://personas.fjruiz.ciclo.iesnervion.es')
             ->setAudience('http://personas.fjruiz.ciclo.iesnervion.es')
             //->setNotBefore(time() + 60)
-            ->setId('1234')
+            //->setId('1234')
             ->sign($signer,'secretoIberico')
             ->getToken();
         return response()->json($resultado,$code)->header("Authorization","Bearer ".$token);
@@ -76,7 +77,7 @@ class PersonaController extends Controller
         //TODO añadir autorización
         $persona=Persona::find($id);
         $persona['Nombre']=$request->input(['Nombre']);
-        $persona['Password']=password_hash($request->input('Password'),PASSWORD_BCRYPT,['coste'=>12]);
+        $persona['Password']=Hash::make($request->input('Password'));
         $persona->save();
         return response()->json($persona);
     }
