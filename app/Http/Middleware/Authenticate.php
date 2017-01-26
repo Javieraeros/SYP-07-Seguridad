@@ -4,9 +4,8 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Contracts\Auth\Factory as Auth;
-use Lcobucci\JWT\Parser;
+use Lcobucci\JWT\Builder;
 use Lcobucci\JWT\Signer\Hmac\Sha256;
-use Lcobucci\JWT\ValidationData;
 
 class Authenticate
 {
@@ -32,15 +31,37 @@ class Authenticate
      * Handle an incoming request.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \Closure  $next
+     * @param  \Closure  $next Obligatoriamente, tendrá que devolver un array con un campo que sea el id
      * @param  string|null  $guard
      * @return mixed
      */
-    //TODO Esto es una authorization (no?), mover a dicho middleware
     public function handle($request, Closure $next)
     {
+        $resultado=$next($request);
+        if($resultado["code"]==200){
+            $token=self::generaToken($resultado["persona"]->Id);
+            return response()->json($resultado["persona"],$resultado["code"])->header("Authorization","Bearer ".$token);
+        }else{
+            return response()->json($resultado["persona"],$resultado["code"]);
+        }
+
 
     }
 
+    public static function generaToken($id){
+        $signer = new Sha256();
+        $secreto=env("APP_KEY");
+        $token=(new Builder())
+            ->setIssuer('http://personas.fjruiz.ciclo.iesnervion.es')
+            ->setAudience('http://personas.fjruiz.ciclo.iesnervion.es')
+            //->setNotBefore(time() + 60)
+            //->setId('1234')
+            ->setExpiration(time()+3600)
+            ->sign($signer,$secreto)
+            ->set("uid",$id)
+            ->getToken();
+
+        return $token;
+    }
 
 }

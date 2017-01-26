@@ -64,7 +64,7 @@ $app->middleware([
  ]);
 
 $app->routeMiddleware([
-    'auth' => App\Http\Middleware\Authenticate::class,
+    'authe' => App\Http\Middleware\Authenticate::class,
 ]);
 
 $app->routeMiddleware([

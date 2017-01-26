@@ -31,7 +31,7 @@ $app->get('personas/{id}',['middleware'=>'autho:id','uses'=>'PersonaController@g
 
 $app->get('personas','PersonaController@getPersonas');
 
-$app->post('personas','PersonaController@postPersonas');
+$app->post('personas',['middleware'=>'authe','uses'=>'PersonaController@postPersonas']);
 
 $app->delete('personas/{id}','PersonaController@deletePersona');
 

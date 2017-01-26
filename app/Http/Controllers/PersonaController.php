@@ -31,7 +31,7 @@ class PersonaController extends Controller
     }
 
     public function getPersonas(){
-        $resultado=Persona::all();
+        $resultado=Persona::all("Nombre");
         return response()->json($resultado);
     }
 
@@ -39,8 +39,7 @@ class PersonaController extends Controller
 
 
         $resultado=null;
-        $code=400;
-        //TODO hacer la recuperación de la persona y codificación de contraseña en middleware
+        $resultado["code"]=400;
         if($request->has('Nombre') and $request->has('Password')){
             $opciones['coste']=12;
 
@@ -48,22 +47,19 @@ class PersonaController extends Controller
             $persona->Id=0; //No inserta el id puesto que es autogenerado
             $persona->Nombre=$request->input('Nombre');
             $persona->Password=Hash::make($request->input('Password'));
-
-            $resultado= Persona::create($persona->toArray());
-            $code=200;
-            //ManejadoraPersona::postPersonaBD($persona);
+            //echo var_dump($persona);
+            //$guardado=$persona->save();
+            //TODO Arreglar!!
+            $resultado=Persona::create($persona->toArray());
+            if($guardado){
+                $resultado["persona"]=$persona;
+                $resultado["code"]=200;
+            }else{
+                $resultado["persona"]="Error con la conexion de la base de datos";
+                $resultado["code"]=400;
+            }
         }
-
-        //TODO mover a Authenticate,guardar id de usuario en el token para authorization
-        $signer = new Sha256();
-        $token=(new Builder())
-            ->setIssuer('http://personas.fjruiz.ciclo.iesnervion.es')
-            ->setAudience('http://personas.fjruiz.ciclo.iesnervion.es')
-            //->setNotBefore(time() + 60)
-            //->setId('1234')
-            ->sign($signer,'secretoIberico')
-            ->getToken();
-        return response()->json($resultado,$code)->header("Authorization","Bearer ".$token);
+        return $resultado;
 
     }
 

@@ -24,7 +24,7 @@ class Persona extends Model implements AuthenticatableContract, AuthorizableCont
      * @var array
      */
     protected $fillable = [
-        'Id', 'Nombre','Correo','Password'
+        'Id', 'Nombre','Password','Correo'
     ];
 
     protected $hidden=[

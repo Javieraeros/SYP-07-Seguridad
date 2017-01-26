@@ -24,10 +24,12 @@ class AuthController extends Controller
         if($request->header("Authorization")!="" and $request->header("Authorization")!=null){
             $usuarioPassword=base64_decode(substr((string) $request->header("Authorization"),6));
             $arrayUsuario=explode(":",$usuarioPassword);
+            echo env("APP_KEY");
             try {
                 $persona = Persona::where("Nombre","=", $arrayUsuario[0])->firstOrFail();
                 if(Hash::check($arrayUsuario[1],$persona->Password)){
                     $resultado=response("Usuario y contraseña correctos",200);
+
                 }else{
                     $resultado=response("La contraseña es incorrecta",400);
                 }
