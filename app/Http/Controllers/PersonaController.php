@@ -40,23 +40,23 @@ class PersonaController extends Controller
 
         $resultado=null;
         $resultado["code"]=400;
-        if($request->has('Nombre') and $request->has('Password')){
-            $opciones['coste']=12;
+        if($request->has('Nombre') and $request->has('Password')) {
+            $opciones['coste'] = 12;
 
-            $persona=new Persona();
-            $persona->Id=0; //No inserta el id puesto que es autogenerado
-            $persona->Nombre=$request->input('Nombre');
-            $persona->Password=Hash::make($request->input('Password'));
+            $persona = new Persona();
+            $persona->Id = 0; //No inserta el id puesto que es autogenerado
+            $persona->Nombre = $request->input('Nombre');
+            $persona->Password = Hash::make($request->input('Password'));
             //echo var_dump($persona);
             //$guardado=$persona->save();
             //TODO Arreglar!!
-            $resultado=Persona::create($persona->toArray());
-            if($guardado){
-                $resultado["persona"]=$persona;
-                $resultado["code"]=200;
-            }else{
-                $resultado["persona"]="Error con la conexion de la base de datos";
-                $resultado["code"]=400;
+            $persona = Persona::create($persona->toArray());
+            if (isset($persona)) {
+                $resultado["persona"] = $persona;
+                $resultado["code"] = 200;
+            } else {
+                $resultado["persona"] = "Error con la conexion de la base de datos";
+                $resultado["code"] = 400;
             }
         }
         return $resultado;
