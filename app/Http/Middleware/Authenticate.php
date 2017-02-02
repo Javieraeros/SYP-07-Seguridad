@@ -4,6 +4,8 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Contracts\Auth\Factory as Auth;
+use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use Lcobucci\JWT\Builder;
 use Lcobucci\JWT\Signer\Hmac\Sha256;
 
@@ -31,11 +33,11 @@ class Authenticate
      * Handle an incoming request.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \Closure  $next Obligatoriamente, tendrá que devolver un array con un campo que sea el id
+     * @param  \Closure  $next Obligatoriamente, tendrá que devolver un array con un campo que sea el code, y una persona
      * @param  string|null  $guard
      * @return mixed
      */
-    public function handle($request, Closure $next)
+    public function handle(Request $request, Closure $next)
     {
         $resultado=$next($request);
         if($resultado["code"]==200){

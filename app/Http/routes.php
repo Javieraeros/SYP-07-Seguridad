@@ -25,7 +25,7 @@ $app->get('/', function () use ($app) {
 
 //Version 2.0    https://www.tutorialspoint.com/laravel/laravel_middleware.htm
 
-$app->get('token','AuthController@getToken');
+$app->get('token',['middleware'=>'authe','uses'=>'AuthController@getToken']);
 
 $app->get('personas/{id}',['middleware'=>'autho:id','uses'=>'PersonaController@getPersona']);
 
