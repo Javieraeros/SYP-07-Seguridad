@@ -22,12 +22,12 @@ class AuthController extends Controller
     public function getToken(Request $request){
         //No me deja usar isset
         if($request->header("Authorization")!="" and $request->header("Authorization")!=null){
-            $usuarioPassword=base64_decode(substr((string) $request->header("Authorization"),6));
+            $usuarioPassword=base64_decode(explode(" ",$request->header("Authorization"))[1]);
             $arrayUsuario=explode(":",$usuarioPassword);
             try {
                 $persona = Persona::where("Nombre","=", $arrayUsuario[0])->firstOrFail();
                 if(Hash::check($arrayUsuario[1],$persona->Password)){
-                    $resultado=response("Usuario y contraseña correctos",200);
+                    $resultado=response($persona,200);
 
                 }else{
                     $resultado=response("La contraseña es incorrecta",400);

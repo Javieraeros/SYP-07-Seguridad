@@ -16,25 +16,22 @@ class Authorization
      * @param  \Closure  $next
      * @return mixed
      */
-    //TODO En vez de usar substr, usar exploit con " " y dependiendo de si el primer valor es Basic o Bearer
-    //llamar a dos métodos privados de esta misma clase que comprueba si está autorizado o no
-    public function handle($request, Closure $next,$id)
+    public function handle($request, Closure $next)
     {
         //datos de validación
+        $id=explode("/",$request->path())[1];
         $data=new ValidationData();
         $data->setIssuer('http://personas.fjruiz.ciclo.iesnervion.es');
         $data->setAudience('http://personas.fjruiz.ciclo.iesnervion.es');
-        //$data->set('uid',$id);
         $signer=new Sha256();
         $secreto=env("APP_KEY");
 
-        //TODO eliminar token de lista blanca,filtrar por id
 
         try{
-            //recuperamos el token con 'Bearer ' delante, por eso usamos substring
+            //recuperamos el token con 'Bearer ' delante, por eso usamos explode
             //Pongo esta linea aqui,porque me puede dar Runtime exception
-            $token =(new Parser())->parse(substr((string) $request->header("Authorization"),7));
-            if($token->validate($data) and $token->verify($signer,$secreto) and $token->getClaim("uid")==$id){
+            $token =(new Parser())->parse(explode(" ",$request->header("Authorization"))[1]);
+            if($token->validate($data) and $token->verify($signer,$secreto) and $token->getClaim("jti")==$id){
                 return $next($id);
             }else{
                 return response("No válido!",401);

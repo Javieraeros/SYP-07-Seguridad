@@ -27,12 +27,12 @@ $app->get('/', function () use ($app) {
 
 $app->get('token',['middleware'=>'authe','uses'=>'AuthController@getToken']);
 
-$app->get('personas/{id}',['middleware'=>'autho:id','uses'=>'PersonaController@getPersona']);
+$app->get('personas/{id}',['middleware'=>'autho','uses'=>'PersonaController@getPersona']);
 
 $app->get('personas','PersonaController@getPersonas');
 
 $app->post('personas',['middleware'=>'authe','uses'=>'PersonaController@postPersonas']);
 
-$app->delete('personas/{id}','PersonaController@deletePersona');
+$app->delete('personas/{id}',['middleware'=>'autho','uses'=>'PersonaController@deletePersona']);
 
 $app->put('personas/{id}','PersonaController@putPersona');

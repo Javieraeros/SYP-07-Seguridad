@@ -40,30 +40,31 @@ class Authenticate
     public function handle(Request $request, Closure $next)
     {
         $resultado=$next($request);
-        if($resultado["code"]==200){
-            $token=self::generaToken($resultado["persona"]->Id);
-            return response()->json($resultado["persona"],$resultado["code"])->header("Authorization","Bearer ".$token);
-        }else{
-            return response()->json($resultado["persona"],$resultado["code"]);
+        if($resultado->getStatusCode()==200){
+            $token=null;
+            //Necesitamos el true para asegurarnos que nos devuelve un array asociativo
+            $token=self::generaToken(json_decode($resultado->content(),true)["Id"]);
+            $resultado->header("Authorization","Bearer ".$token);
         }
-
+        return $resultado;
 
     }
 
     public static function generaToken($id){
         $signer = new Sha256();
         $secreto=env("APP_KEY");
-        $token=(new Builder())
+        //Importante poner todos los datos antes del sign!!!
+        $tokenDevolver=(new Builder())
             ->setIssuer('http://personas.fjruiz.ciclo.iesnervion.es')
             ->setAudience('http://personas.fjruiz.ciclo.iesnervion.es')
             //->setNotBefore(time() + 60)
             //->setId('1234')
             ->setExpiration(time()+3600)
+            ->setId($id)
             ->sign($signer,$secreto)
-            ->set("uid",$id)
             ->getToken();
 
-        return $token;
+        return $tokenDevolver;
     }
 
 }

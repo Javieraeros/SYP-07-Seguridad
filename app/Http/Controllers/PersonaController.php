@@ -45,17 +45,19 @@ class PersonaController extends Controller
             $persona->Password = Hash::make($request->input('Password'));
             $persona = Persona::create($persona->getAttributes());
             if (isset($persona)) {
-                //TODO no funciona
-                $resultado=response()->setStatusCode(200)->setContent($persona);
+                $resultado=response()->json($persona,200);
             } else {
-                $resultado["persona"] = "Error con la conexion de la base de datos";
-                $resultado["code"] = 400;
+                $resultado=response()->json("Error con la conexion de la base de datos",400);
             }
         }
         return $resultado;
 
     }
 
+    /**
+     * @param $id
+     * @return \Illuminate\Http\JsonResponse El valor del body será 1 si se ha borrado la persona
+     */
     public function deletePersona($id){
         //TODO añadir autorización
         $persona=Persona::destroy($id);
